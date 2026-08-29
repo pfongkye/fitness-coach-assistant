@@ -1,6 +1,8 @@
 import pytest
 from tools.readiness_tools import ReadinessEngine, PreSessionCheckin, PostSessionCheckin
 from mcp_servers.crossfit_knowledge import CrossFitKnowledgeService
+from agents.profile_vault import check_profile_completeness, save_athlete_profile
+from agents.adaptive_planner import conduct_pre_session_checkin
 
 def test_pre_session_readiness_evaluation():
     # 1. High energy, good sleep
@@ -46,3 +48,37 @@ def test_crossfit_movement_knowledge_search():
     assert snatch["name"] == "Squat Snatch / Full Snatch"
     assert len(snatch["points_of_performance"]) > 0
     assert "youtube.com" in snatch["official_video_url"]
+
+def test_profile_completeness_and_zero_guessing():
+    # 1. Unregistered user -> Incomplete, requires all baseline metrics
+    incomplete = check_profile_completeness("unregistered_user_999")
+    assert incomplete["is_complete"] is False
+    assert "gender" in incomplete["missing_fields"]
+    assert "age" in incomplete["missing_fields"]
+    assert "training_frequency_per_week" in incomplete["missing_fields"]
+    assert "crossfit_experience" in incomplete["missing_fields"]
+    assert len(incomplete["prompt_message"]) > 0
+
+    # 2. Save complete profile with training frequency & experience
+    user_id = "test_complete_user"
+    save_athlete_profile(
+        user_id=user_id,
+        age=29,
+        gender="female",
+        height_cm=168.0,
+        weight_kg=62.0,
+        city="Lyon",
+        training_frequency_per_week=5,
+        crossfit_experience="18 months",
+        fitness_level="intermediate"
+    )
+    
+    complete = check_profile_completeness(user_id)
+    assert complete["is_complete"] is True
+    assert complete["profile"]["age"] == 29
+    assert complete["profile"]["training_frequency_per_week"] == 5
+    assert complete["profile"]["crossfit_experience"] == "18 months"
+
+    # 3. Test pre-session check-in awareness
+    checkin_res = conduct_pre_session_checkin(user_id=user_id, energy_level=4, sleep_quality="good")
+    assert checkin_res["needs_profile_onboarding"] is False

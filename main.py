@@ -1,6 +1,6 @@
 import sys
 from agents.orchestrator import root_agent
-from agents.profile_vault import save_athlete_profile, get_athlete_profile
+from agents.profile_vault import save_athlete_profile, get_athlete_profile, check_profile_completeness
 from agents.adaptive_planner import generate_adapted_workout, conduct_pre_session_checkin
 from agents.session_analyst import record_post_session_checkin, get_workout_for_day, get_longitudinal_trends_and_insights
 from agents.movement_research import find_movement_technique_and_video
@@ -14,8 +14,15 @@ def run_sample_athlete_journey():
     
     user_id = "athlete_pascal"
     
-    # 1. Onboarding & Encrypted Profile Storage
-    print("\n1. [Profile Vault] Saving encrypted profile...")
+    # 0. Zero-Guessing Check on New/Unregistered Athlete
+    print("\n0. [Zero-Guessing Onboarding Check] Checking profile completeness before workout...")
+    init_check = check_profile_completeness("brand_new_user")
+    print(f"-> Profile Complete: {init_check['is_complete']}")
+    print(f"-> Missing Metrics: {init_check.get('missing_fields')}")
+    print(f"-> Zero-Guessing Prompt to User:\n{init_check.get('prompt_message')}")
+    
+    # 1. Onboarding & Encrypted Profile Storage (including training frequency & CrossFit experience)
+    print("\n1. [Profile Vault] Saving complete encrypted profile...")
     profile_res = save_athlete_profile(
         user_id=user_id,
         age=32,
@@ -23,6 +30,8 @@ def run_sample_athlete_journey():
         height_cm=180.0,
         weight_kg=80.0,
         city="Paris",
+        training_frequency_per_week=4,
+        crossfit_experience="2 years",
         fitness_level="advanced",
         dietary_preference="paleo",
         injury_history=["minor left shoulder impingement"]
@@ -35,6 +44,7 @@ def run_sample_athlete_journey():
     workout_res = generate_adapted_workout(
         workout_type="High-Intensity Metcon & Squat Strength",
         city_name="Paris",
+        user_id=user_id,
         energy_level=3,
         sleep_quality="fair",
         soreness_areas=["legs"]

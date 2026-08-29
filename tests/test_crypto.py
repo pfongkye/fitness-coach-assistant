@@ -52,3 +52,11 @@ def test_pii_sanitization_for_llm():
     assert safe_view["weight_kg"] == 75.5
     assert safe_view["city"] == "Paris"
     assert "athlete_id" in safe_view
+    
+    # Test with training background
+    raw_data_with_exp = dict(raw_data)
+    raw_data_with_exp["training_frequency_per_week"] = 4
+    raw_data_with_exp["crossfit_experience"] = "2 years"
+    safe_view_exp = sanitize_pii_for_llm(raw_data_with_exp)
+    assert safe_view_exp["training_frequency_per_week"] == 4
+    assert safe_view_exp["crossfit_experience"] == "2 years"

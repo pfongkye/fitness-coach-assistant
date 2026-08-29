@@ -71,6 +71,8 @@ def sanitize_pii_for_llm(raw_profile: Dict[str, Any]) -> Dict[str, Any]:
         "gender": raw_profile.get("gender", "unspecified"),
         "height_cm": raw_profile.get("height_cm"),
         "weight_kg": raw_profile.get("weight_kg"),
+        "training_frequency_per_week": raw_profile.get("training_frequency_per_week"),
+        "crossfit_experience": raw_profile.get("crossfit_experience"),
         "fitness_level": raw_profile.get("fitness_level", "intermediate"),
         "dietary_preference": raw_profile.get("dietary_preference", "omnivore"),
         "injury_history": raw_profile.get("injury_history", []),
