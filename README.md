@@ -96,8 +96,8 @@ Edit `.env` with your API keys:
 ```ini
 # Google AI Studio API Key (Free tier): https://aistudio.google.com/
 GEMINI_API_KEY=your_gemini_api_key_here
-GEMINI_MODEL=gemini-2.5-flash
-GEMINI_FAST_MODEL=gemini-2.5-flash
+GEMINI_MODEL=gemini-3.6-flash
+GEMINI_FAST_MODEL=gemini-3.6-flash
 
 # Optional GCP Settings
 GCP_PROJECT=fitness-coach-dev

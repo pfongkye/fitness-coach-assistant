@@ -17,8 +17,8 @@ class CoachSettings(BaseModel):
     version: str = "1.0.0"
     
     # Model Configuration (Gemini Flash tier across all agents)
-    default_model: str = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
-    fast_model: str = os.getenv("GEMINI_FAST_MODEL", os.getenv("GEMINI_MODEL", "gemini-2.0-flash"))
+    default_model: str = os.getenv("GEMINI_MODEL", "gemini-3.6-flash")
+    fast_model: str = os.getenv("GEMINI_FAST_MODEL", os.getenv("GEMINI_MODEL", "gemini-3.6-flash"))
     
     # Google Cloud & Security settings
     gcp_project_id: str = os.getenv("GCP_PROJECT", "fitness-coach-dev")
