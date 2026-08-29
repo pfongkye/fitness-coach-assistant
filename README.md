@@ -1,6 +1,6 @@
 # 🏋️‍♂️ AI Expert Fitness Coach Assistant (Google ADK)
 
-An expert, multimodal AI fitness and CrossFit coach assistant built with the **Google Agent Development Kit (ADK)** ([adk.dev](https://adk.dev)) and powered by **Gemini Flash**.
+An expert, multimodal AI fitness and CrossFit coach assistant built with the **Google Agent Development Kit (ADK)** ([adk.dev](https://adk.dev)) and powered by **Gemini 3.6 Flash**.
 
 ---
 
@@ -16,7 +16,7 @@ An expert, multimodal AI fitness and CrossFit coach assistant built with the **G
    - **`GamificationAgent`**: Octalysis motivation engine managing XP, levels, PR tracking, weekly quests, and streak protection with **Monthly Streak Freeze Tokens**.
 
 2. **100% Gemini Flash Tier**:
-   - Standardized on `gemini-2.5-flash` / `gemini-2.0-flash` for low latency, sub-second responses, and Google AI Studio Free Tier compatibility.
+   - Standardized on **`gemini-3.6-flash`** for low latency, sub-second responses, and Google AI Studio Free Tier compatibility.
 
 3. **Cloud Run Ready with Web UI**:
    - Ready for local interactive development via `adk web` or one-line deployment to **Google Cloud Run** using `--with_ui`.
@@ -27,7 +27,9 @@ An expert, multimodal AI fitness and CrossFit coach assistant built with the **G
 
 ```
 fitness-coach/
-├── agent.py                      # ADK root_agent entrypoint for adk web & runners
+├── fitness_coach/                # Primary ADK agent package (valid Python identifier)
+│   ├── __init__.py
+│   └── agent.py                  # Exposes root_agent for ADK Web & Runners
 ├── agents/                       # Specialized domain sub-agents
 │   ├── orchestrator.py           # Head coach orchestrator
 │   ├── profile_vault.py          # Encrypted biometrics vault
@@ -59,7 +61,7 @@ fitness-coach/
 │   ├── test_weather_adaptation.py
 │   └── test_gamification.py
 ├── .env.example                  # Template for secrets and environment variables
-├── .gitignore                    # Git ignore file (secures .env, venv, caches)
+├── .gitignore                    # Git ignore file (secures .env, venv, caches, .adk)
 ├── Dockerfile                    # Production container image
 ├── deploy.sh                     # Google Cloud Run deployment script
 ├── requirements.txt
@@ -95,7 +97,10 @@ cp .env.example .env
 Edit `.env` with your API keys:
 ```ini
 # Google AI Studio API Key (Free tier): https://aistudio.google.com/
-GEMINI_API_KEY=your_gemini_api_key_here
+# Either GOOGLE_API_KEY or GEMINI_API_KEY is automatically recognized:
+GOOGLE_API_KEY=your_gemini_api_key_here
+
+# Model Selection (defaults to gemini-3.6-flash)
 GEMINI_MODEL=gemini-3.6-flash
 GEMINI_FAST_MODEL=gemini-3.6-flash
 
@@ -114,20 +119,31 @@ pytest -v
 ```
 *Executes all 14 unit and integration tests verifying crypto, weather adaptation, recipe generation, date queries, and gamification.*
 
-### 4. Run End-to-End Simulation
+### 4. Run End-to-End CLI Simulation
 
 ```bash
 python3 main.py
 ```
 *Simulates the full athlete lifecycle: onboarding $\rightarrow$ pre-checkin $\rightarrow$ weather adaptation $\rightarrow$ movement research $\rightarrow$ post-checkin $\rightarrow$ refuel recipes $\rightarrow$ history recall $\rightarrow$ gamification XP.*
 
-### 5. Launch Interactive Web UI (ADK Web)
+### 5. Test Single-Turn Query via CLI
+
+```bash
+python3 -m google.adk.cli run fitness_coach "hello, what is today's session?"
+```
+
+### 6. Launch Interactive Web UI (ADK Web)
 
 ```bash
 # Launch ADK Web Chat UI
 python3 -m google.adk.cli web --port 8080
 ```
-*Open `http://localhost:8080` in your browser to interactively chat with your coach.*
+- Open **`http://localhost:8080`** in your browser.
+- Select **`fitness_coach`** from the agent dropdown.
+- Start chatting with your coach!
+
+> [!TIP]
+> For verbose debugging logs in the terminal, run: `python3 -m google.adk.cli web -v`. ADK also streams detailed logs to `/tmp/agents_log/agent.latest.log`.
 
 ---
 
