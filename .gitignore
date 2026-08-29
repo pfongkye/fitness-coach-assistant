@@ -22,6 +22,9 @@ build/
 *.pem
 *.key
 
+# ADK Local Storage & Sessions
+.adk/
+
 # macOS System Files
 .DS_Store
 .AppleDouble
