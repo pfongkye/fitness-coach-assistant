@@ -5,14 +5,20 @@ from pydantic import BaseModel, Field
 # Automatically load environment variables from local .env if present
 load_dotenv()
 
+# Synchronize GOOGLE_API_KEY and GEMINI_API_KEY for ADK and google-genai
+api_key = os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY")
+if api_key:
+    os.environ["GOOGLE_API_KEY"] = api_key
+    os.environ["GEMINI_API_KEY"] = api_key
+
 class CoachSettings(BaseModel):
     """Global configuration settings for the AI Fitness Coach Assistant."""
     app_name: str = "Expert AI Fitness Coach"
     version: str = "1.0.0"
     
     # Model Configuration (Gemini Flash tier across all agents)
-    default_model: str = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
-    fast_model: str = os.getenv("GEMINI_FAST_MODEL", "gemini-2.5-flash")
+    default_model: str = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
+    fast_model: str = os.getenv("GEMINI_FAST_MODEL", os.getenv("GEMINI_MODEL", "gemini-2.0-flash"))
     
     # Google Cloud & Security settings
     gcp_project_id: str = os.getenv("GCP_PROJECT", "fitness-coach-dev")
