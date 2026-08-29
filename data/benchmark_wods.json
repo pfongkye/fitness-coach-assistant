@@ -1,0 +1,49 @@
+{
+  "benchmarks": [
+    {
+      "name": "Fran",
+      "type": "For Time",
+      "description": "21-15-9 reps of Thrusters (95/65 lbs) and Pull-ups",
+      "movements": ["Thruster", "Pull-Up"],
+      "rx_weights": {"male": "95 lbs (43 kg)", "female": "65 lbs (29 kg)"},
+      "stimulus": "Fast-paced glycolytic sprint (target under 5-8 mins)",
+      "scaling": "Light dumbbell thrusters (25/15 lbs) + Banded / Jumping Pull-ups or Ring Rows"
+    },
+    {
+      "name": "Cindy",
+      "type": "20 min AMRAP",
+      "description": "As Many Rounds As Possible in 20 minutes: 5 Pull-ups, 10 Push-ups, 15 Air Squats",
+      "movements": ["Pull-Up", "Push-Up", "Air Squat"],
+      "rx_weights": "Bodyweight",
+      "stimulus": "Aerobic pacing and bodyweight endurance",
+      "scaling": "5 Ring Rows, 10 Box/Knee Push-ups, 15 Air Squats"
+    },
+    {
+      "name": "Helen",
+      "type": "3 Rounds For Time",
+      "description": "3 Rounds: 400m Run, 21 Kettlebell Swings (53/35 lbs), 12 Pull-ups",
+      "movements": ["400m Run", "Kettlebell Swing", "Pull-Up"],
+      "rx_weights": {"male": "53 lbs (24 kg)", "female": "35 lbs (16 kg)"},
+      "stimulus": "Cardiovascular stamina and grip endurance",
+      "scaling": "500m Row / 1000m Bike (if weather requires), 35/26 lbs KB, Ring Rows"
+    },
+    {
+      "name": "Grace",
+      "type": "For Time",
+      "description": "30 Clean and Jerks for time (135/95 lbs)",
+      "movements": ["Clean and Jerk"],
+      "rx_weights": {"male": "135 lbs (61 kg)", "female": "95 lbs (43 kg)"},
+      "stimulus": "Power endurance and barbell cycling technique",
+      "scaling": "95/65 lbs barbell or Dual Dumbbell Clean & Jerk (35/25 lbs)"
+    },
+    {
+      "name": "Murph",
+      "type": "Hero WOD For Time",
+      "description": "1 Mile Run, 100 Pull-ups, 200 Push-ups, 300 Air Squats, 1 Mile Run (with 20/14 lb vest optional)",
+      "movements": ["Run", "Pull-Up", "Push-Up", "Air Squat"],
+      "rx_weights": "20/14 lb weight vest (optional)",
+      "stimulus": "High-volume mental fortitude and muscular endurance",
+      "scaling": "Half Murph (800m run, 50 pull-ups, 100 push-ups, 150 squats, 800m run, no vest)"
+    }
+  ]
+}

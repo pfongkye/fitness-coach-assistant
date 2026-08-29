@@ -1,0 +1,342 @@
+{
+  "movements": [
+    {
+      "id": "air_squat",
+      "name": "Air Squat",
+      "category": "Foundational / Lower Body",
+      "points_of_performance": [
+        "Feet shoulder-width apart, full foot contact",
+        "Hips descend back and down",
+        "Hip crease passes below the top of the patella (below parallel)",
+        "Maintain lumbar curve and neutral spine",
+        "Knees track in line with the toes",
+        "Complete full hip and knee extension at the top"
+      ],
+      "common_faults": [
+        "Loss of lumbar curve (butt wink / rounding back)",
+        "Weight shifting to toes or heels lifting off floor",
+        "Knees caving inward (valgus collapse)",
+        "Not reaching below parallel depth"
+      ],
+      "scaling_options": [
+        {"level": "Beginner", "variation": "Squat to a 20-inch box/target for depth consistency", "description": "Ensures hip crease breaks parallel while maintaining balance"},
+        {"level": "Assisted", "variation": "TRX / Pole-assisted squat", "description": "Relieves load to focus on torso angle and knee tracking"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=C_VtOYc6j5c",
+      "source": "CrossFit Level 1 Training Guide"
+    },
+    {
+      "id": "front_squat",
+      "name": "Front Squat",
+      "category": "Foundational / Lower Body",
+      "points_of_performance": [
+        "Bar rests on anterior deltoids with high elbows (rack position)",
+        "Loose fingertip grip, triceps parallel to the floor",
+        "Hips descend back and down breaking parallel",
+        "Torso stays as upright as possible",
+        "Elbows stay driven up high throughout entire ascent"
+      ],
+      "common_faults": [
+        "Elbows dropping down causing chest to collapse forward",
+        "Weight shifting onto toes",
+        "Gripping the bar with a full death grip instead of fingertips"
+      ],
+      "scaling_options": [
+        {"level": "Scaled", "variation": "Dumbbell / Kettlebell Front Rack Squat", "description": "Easier wrist mobility requirement while training upright torso"},
+        {"level": "Beginner", "variation": "Goblet Squat with kettlebell/dumbbell", "description": "Reinforces anterior load balance and deep squat mechanics"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=m4ytaCJZpl0",
+      "source": "CrossFit Level 1 Training Guide"
+    },
+    {
+      "id": "overhead_squat",
+      "name": "Overhead Squat",
+      "category": "Foundational / Mobility / Lower Body",
+      "points_of_performance": [
+        "Wide snatch grip on the barbell, active shoulders pushing up into the bar",
+        "Armpits face forward, elbows locked out",
+        "Barbell stays centered over the middle of the foot throughout range of motion",
+        "Hips descend below parallel with upright torso",
+        "Knees track over toes, full lockout at top"
+      ],
+      "common_faults": [
+        "Bar moving forward of the frontal plane",
+        "Bending elbows or soft active shoulders",
+        "Excessive forward torso lean due to ankle/thoracic tightness"
+      ],
+      "scaling_options": [
+        {"level": "Scaled", "variation": "PVC Pipe Overhead Squat to 24\" Box", "description": "Develops thoracic mobility and shoulder stability without spinal load"},
+        {"level": "Intermediate", "variation": "Single-Arm Kettlebell Overhead Squat", "description": "Exposes and fixes unilateral shoulder/thoracic imbalances"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=PNhzpUhp2X0",
+      "source": "CrossFit Level 1 Training Guide"
+    },
+    {
+      "id": "strict_press",
+      "name": "Shoulder Press / Strict Press",
+      "category": "Foundational / Upper Body Press",
+      "points_of_performance": [
+        "Feet hip-width apart, hands just outside shoulders",
+        "Full grip with knuckles turned upward, elbows slightly in front of bar",
+        "Core braced, glutes squeezed, ribs pulled down",
+        "Bar moves in a straight vertical path, head pulls back to clear bar",
+        "Full lockout overhead with active shoulders and head back through the window"
+      ],
+      "common_faults": [
+        "Hyperextending the lumbar spine (arching back to press)",
+        "Elbows flaring excessively out to the sides",
+        "Bar moving forward around the face instead of vertical"
+      ],
+      "scaling_options": [
+        {"level": "Scaled", "variation": "Seated Dumbbell Overhead Press", "description": "Isolates upper body pressing without lumbar compensation"},
+        {"level": "Beginner", "variation": "Light Dumbbell Neutral-Grip Press", "description": "Reduces shoulder impingement risk"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=5yWaNO4352g",
+      "source": "CrossFit Level 1 Training Guide"
+    },
+    {
+      "id": "push_press",
+      "name": "Push Press",
+      "category": "Foundational / Dynamic Press",
+      "points_of_performance": [
+        "Dip: Hips descend straight down 2-4 inches with vertical torso",
+        "Drive: Violent, rapid hip and knee extension jumping into the floor",
+        "Press: Arms push the bar overhead only after hips reach full extension",
+        "Catch: Locked out overhead with hips and knees extended"
+      ],
+      "common_faults": [
+        "Muting the hips (bending forward during dip instead of vertical torso)",
+        "Pressing early before hip drive finishes",
+        "Re-bending knees upon overhead lockout (turning it into a push jerk)"
+      ],
+      "scaling_options": [
+        {"level": "Scaled", "variation": "Dual Dumbbell Push Press", "description": "Builds leg drive coordination with independent shoulder stabilizers"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=X6-Y64DaqEc",
+      "source": "CrossFit Level 1 Training Guide"
+    },
+    {
+      "id": "push_jerk",
+      "name": "Push Jerk",
+      "category": "Foundational / Dynamic Press",
+      "points_of_performance": [
+        "Dip: Vertical torso dip",
+        "Drive: Powerful hip/leg drive",
+        "Drop: Catch the barbell in a partial squat with arms locked out overhead",
+        "Stand: Recover to full standing hip/knee extension before lowering bar"
+      ],
+      "common_faults": [
+        "Lack of full hip extension before dipping under",
+        "Soft elbow catch overhead",
+        "Lowering the bar before standing up to full lockout"
+      ],
+      "scaling_options": [
+        {"level": "Scaled", "variation": "Dumbbell Push Jerk", "description": "Helps athletes feel the catch under the weight without barbell path constraints"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=V-hKuAfWNUw",
+      "source": "CrossFit Level 1 Training Guide"
+    },
+    {
+      "id": "deadlift",
+      "name": "Deadlift",
+      "category": "Foundational / Posterior Chain",
+      "points_of_performance": [
+        "Feet hip-width apart, bar over mid-foot",
+        "Hands outside knees with full grip",
+        "Shoulders slightly in front of the bar, lats engaged",
+        "Spine neutral, chest up",
+        "Hips and shoulders rise at the same rate until bar passes knees",
+        "Finish standing tall with hips open and shoulders behind the bar"
+      ],
+      "common_faults": [
+        "Rounding the lumbar spine under load",
+        "Hips shooting up first (stripper deadlift)",
+        "Bouncing bar off the floor losing tension"
+      ],
+      "scaling_options": [
+        {"level": "Scaled", "variation": "Kettlebell / Trap-Bar Deadlift", "description": "Allows more natural center of mass for beginners or mobility restricted athletes"},
+        {"level": "Beginner", "variation": "Elevated Barbell Deadlift (from blocks/plates)", "description": "Shortens range of motion to protect lower back posture"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=op9kVnSso6Q",
+      "source": "CrossFit Level 1 Training Guide"
+    },
+    {
+      "id": "sumo_deadlift_high_pull",
+      "name": "Sumo Deadlift High Pull (SDHP)",
+      "category": "Foundational / Power & Hip Drive",
+      "points_of_performance": [
+        "Wide stance (sumo) with toes pointed out, hands narrow on the bar inside knees",
+        "Deadlift to hips, followed by violent hip extension and shrug",
+        "Elbows pull high and outside finishing above the bar",
+        "Bar ascends to collarbone level",
+        "Arms extend back down before hips hinge on descent"
+      ],
+      "common_faults": [
+        "Pulling with arms before hip extension completes",
+        "Elbows dropping below the hands at the top",
+        "Narrow stance with round spine"
+      ],
+      "scaling_options": [
+        {"level": "Scaled", "variation": "Kettlebell Sumo Deadlift High Pull", "description": "Single implement simplifies bar path and elbow height mechanics"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=o6ZkJk973aQ",
+      "source": "CrossFit Level 1 Training Guide"
+    },
+    {
+      "id": "med_ball_clean",
+      "name": "Medicine Ball Clean",
+      "category": "Foundational / Olympic Clean Mechanics",
+      "points_of_performance": [
+        "Stance shoulder-width, ball between feet",
+        "Palms on outside of ball, arms straight, neutral spine",
+        "Deadlift to full hip extension and shrug",
+        "Pull-under into a deep front squat catching ball at chest",
+        "Stand to full extension with ball in front rack"
+      ],
+      "common_faults": [
+        "Curling the ball with biceps instead of dropping under",
+        "Tossing the ball up in the air",
+        "Not reaching full hip extension before pulling under"
+      ],
+      "scaling_options": [
+        {"level": "Beginner", "variation": "Medicine Ball Deadlift into Shrug", "description": "Deconstructs the hip explosion prior to adding the pull-under"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=KVU_8GZ3kQc",
+      "source": "CrossFit Level 1 Training Guide"
+    },
+    {
+      "id": "thruster",
+      "name": "Thruster",
+      "category": "Metcon / Full Body Power",
+      "points_of_performance": [
+        "Front squat into an immediate overhead press in one continuous fluid motion",
+        "Deep squat breaking parallel with high elbows",
+        "Explosive hip extension propelling barbell off the shoulders",
+        "Full lockout overhead with ears through the window",
+        "Receive bar smoothly back into front rack while initiating the next squat"
+      ],
+      "common_faults": [
+        "Pausing between squat and overhead press (segmenting movement)",
+        "Dropping elbows and collapsing torso in squat",
+        "Pressing before hips fully extend"
+      ],
+      "scaling_options": [
+        {"level": "Scaled", "variation": "Dual Dumbbell Thrusters", "description": "Reduces wrist and shoulder mobility demands"},
+        {"level": "Beginner", "variation": "Medicine Ball Thrusters / Wall Balls", "description": "Lighter load emphasizing movement rhythm and conditioning"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=L219ltL15zk",
+      "source": "CrossFit Movement Guide"
+    },
+    {
+      "id": "snatch",
+      "name": "Squat Snatch / Full Snatch",
+      "category": "Olympic Weightlifting",
+      "points_of_performance": [
+        "Wide hook-grip stance, bar over midfoot, chest up",
+        "1st Pull: Smooth lift from floor to mid-thigh maintaining back angle",
+        "2nd Pull: Violent triple extension (ankles, knees, hips) and aggressive shrug",
+        "3rd Pull: Pull body aggressively under the bar into a deep overhead squat",
+        "Lockout: Stable overhead catch, stand to full extension"
+      ],
+      "common_faults": [
+        "Rushing off the floor and losing back tightness",
+        "Banging the bar out forward with hips rather than vertical trajectory",
+        "Pressing out the catch overhead instead of aggressive lockout"
+      ],
+      "scaling_options": [
+        {"level": "Intermediate", "variation": "Power Snatch (catch above parallel)", "description": "Removes deep overhead squat requirement while drilling hip power"},
+        {"level": "Scaled", "variation": "Hang Dumbbell Power Snatch", "description": "Unilateral power development without complex barbell setup"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=9xQp2sldyts",
+      "source": "USA Weightlifting / CrossFit Weightlifting"
+    },
+    {
+      "id": "clean_and_jerk",
+      "name": "Clean and Jerk",
+      "category": "Olympic Weightlifting",
+      "points_of_performance": [
+        "Clean: Floor to shoulders in a deep front squat with rapid elbow turnover",
+        "Stand up fully with bar in front rack",
+        "Jerk: Dip straight down, drive upward, split feet or push jerk into lockout overhead",
+        "Recovery: Front foot steps back halfway, back foot steps forward, full stand"
+      ],
+      "common_faults": [
+        "Catching the clean on toes with low elbows",
+        "Dipping forward on the jerk drive",
+        "Stepping back foot first on split jerk recovery"
+      ],
+      "scaling_options": [
+        {"level": "Intermediate", "variation": "Power Clean + Push Jerk", "description": "Catches both portions above parallel"},
+        {"level": "Scaled", "variation": "Dual Dumbbell Clean and Jerk", "description": "Excellent conditioning scaling"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=8miqQQJXZ0M",
+      "source": "USA Weightlifting / CrossFit Weightlifting"
+    },
+    {
+      "id": "pull_up",
+      "name": "Pull-Up (Strict / Kipping / Butterfly)",
+      "category": "Gymnastics / Upper Body Pull",
+      "points_of_performance": [
+        "Full grip on the pull-up bar, arms fully extended at bottom (dead hang)",
+        "Initiate from active lats and hollow body position",
+        "Chin clearly rises above the horizontal plane of the bar",
+        "Return smoothly to full lockout at the bottom"
+      ],
+      "common_faults": [
+        "Not reaching full arm lockout at bottom (short-arming reps)",
+        "Chin failing to break the bar plane",
+        "Hyperextending neck reaching for the bar instead of pulling"
+      ],
+      "scaling_options": [
+        {"level": "Beginner", "variation": "Ring Rows with feet at 45-degree angle", "description": "Builds horizontal pulling strength and lat engagement"},
+        {"level": "Scaled", "variation": "Banded Pull-Ups or Jumping Pull-Ups with controlled eccentric", "description": "Preserves vertical pulling movement pattern"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=HRV5YKKaeVw",
+      "source": "CrossFit Gymnastics"
+    },
+    {
+      "id": "muscle_up",
+      "name": "Ring Muscle-Up / Bar Muscle-Up",
+      "category": "Advanced Gymnastics",
+      "points_of_performance": [
+        "Rings: False grip, hollow to arch kip",
+        "Aggressive hip drive up towards the rings",
+        "Fast transition: head and chest whip through the rings into a deep ring dip",
+        "Press out to full lockout on top of rings with turned-out palms"
+      ],
+      "common_faults": [
+        "Pulling too early before hip elevation",
+        "Missing the fast transition over the rings",
+        "Chicken winging (one elbow rolling over before the other on bar muscle-up)"
+      ],
+      "scaling_options": [
+        {"level": "Step 1", "variation": "Strict Chest-to-Bar Pull-Up + Strict Ring Dip", "description": "Foundational strength prerequisite"},
+        {"level": "Step 2", "variation": "Low Ring Transition Drills with feet on floor", "description": "Teaches the fast turnover mechanics into the dip"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=GcdB548_P4c",
+      "source": "CrossFit Gymnastics"
+    },
+    {
+      "id": "burpee",
+      "name": "Burpee (Standard / Bar-Facing / Target)",
+      "category": "Bodyweight Conditioning",
+      "points_of_performance": [
+        "From standing, place hands on floor and kick or step feet back",
+        "Chest and thighs make contact with the floor",
+        "Press up and jump or step feet back under hips",
+        "Jump with feet leaving the floor, hands clapping overhead with full hip extension"
+      ],
+      "common_faults": [
+        "Chest not touching floor",
+        "Not opening hips at the jump at the top",
+        "Sagging lower back into hyperextension during the push-up"
+      ],
+      "scaling_options": [
+        {"level": "Scaled", "variation": "Step-Back / Step-Up Burpee (no jump)", "description": "Low impact cardiovascular scaling"},
+        {"level": "Beginner", "variation": "Elevated Hands Burpee to 24\" Box", "description": "Reduces floor-to-stand distance for mobility or wrist limitations"}
+      ],
+      "official_video_url": "https://www.youtube.com/watch?v=auBLPXO8Fww",
+      "source": "CrossFit Movement Library"
+    }
+  ]
+}
