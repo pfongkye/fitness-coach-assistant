@@ -32,7 +32,7 @@ gcloud run deploy "$SERVICE_NAME" \
   --memory 2Gi \
   --cpu 2 \
   --min-instances 1 \
-  --set-env-vars GEMINI_MODEL="gemini-3.6-flash",GCP_PROJECT="$PROJECT_ID",GCP_REGION="$REGION"
+  --set-env-vars GEMINI_MODEL="gemini-3.6-flash",GCP_PROJECT="$PROJECT_ID",GCP_REGION="$REGION",GEMINI_API_KEY="$GEMINI_API_KEY"
 
 echo "================================================================="
 echo "✅ Deployment Complete! Visit your Cloud Run Service URL above to access the Web UI."

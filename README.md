@@ -149,21 +149,37 @@ python3 -m google.adk.cli web --port 8080
 
 ## ☁️ Google Cloud Deployment (Cloud Run)
 
+As prerequisites: 
+- Install [Google Cloud CLI](https://docs.cloud.google.com/sdk/docs/install-sdk#latest-version). 
+- Activate billing on your GCP project in [AI Studio](https://aistudio.google.com/).
+- Activate [service account](https://docs.cloud.google.com/sdk/gcloud/reference/auth/activate-service-account)
+
 ### Method 1: Using the Deployment Script
 ```bash
 export GCP_PROJECT="your-gcp-project-id"
 export GCP_REGION="us-central1"
+export GEMINI_API_KEY="your-ai-studio-project-api-key"
 chmod +x deploy.sh
 ./deploy.sh
 ```
 
-### Method 2: Using the ADK CLI
+### Method 2: Using the ADK CLI (TODO: To be reviewed as it does not deploy properly for now)
+
 ```bash
+> gcloud iam service-accounts keys create /path/key.json --iam-account="iam-account-email"
+> gcloud auth activate-service-account SERVICE_ACCOUNT@DOMAIN.COM --key-file=/path/key.json --project="project-id"
+```
+- Import project linked to service account in [AI studio](https://aistudio.google.com/docs/api-key#import-projects)
+- Add entry for [GOOGLE_API_KEY](https://adk.dev/deploy/cloud-run/) (or GEMINI_API_KEY???)
+
+```bash
+export GCP_PROJECT="your-gcp-project-id"
 adk deploy cloud_run \
-  --project_id="$GCP_PROJECT" \
+  --project="$GCP_PROJECT" \
   --region="us-central1" \
   --service_name="fitness-coach-assistant" \
-  --with_ui
+  --with_ui \
+  ./
 ```
 
 ---
@@ -173,3 +189,8 @@ adk deploy cloud_run \
 - **In-Memory PII Sanitization**: LLMs receive strictly anonymized tokens without personal names or emails.
 - **Medical Disclaimer Guardrails**: Automatic halt and physical therapy disclaimer if acute joint or tendon pain is flagged during post-session check-ins.
 - **Anti-Burnout Gamification**: Streak protection tokens prevent breaking habit streaks during necessary rest or recovery days.
+
+## Troubleshoot
+
+- Activate [Cloud Run Admin API](https://console.cloud.google.com/apis/api/run.googleapis.com) when having error `(gcloud.run.deploy) PERMISSION_DENIED: Cloud Run Admin API has not been used in project...`
+- Activate [Cloud Build API](https://console.cloud.google.com/apis/library/cloudbuild.googleapis.com) when having error `(gcloud.run.deploy) PERMISSION_DENIED: Cloud Build API has not been used in project...`
