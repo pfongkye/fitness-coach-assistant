@@ -76,7 +76,7 @@ fitness-coach/
 
 ```bash
 # Clone and enter directory
-cd fitness-coach
+cd fitness-coach-assistant
 
 # Create and activate virtual environment
 python3 -m venv .venv
@@ -117,7 +117,7 @@ GCP_REGION=us-central1
 ```bash
 pytest -v
 ```
-*Executes all 14 unit and integration tests verifying crypto, weather adaptation, recipe generation, date queries, and gamification.*
+*Executes all unit and integration tests verifying crypto, weather adaptation, recipe generation, date queries, and gamification.*
 
 ### 4. Run End-to-End CLI Simulation
 
@@ -170,7 +170,7 @@ chmod +x deploy.sh
 > gcloud auth activate-service-account SERVICE_ACCOUNT@DOMAIN.COM --key-file=/path/key.json --project="project-id"
 ```
 - Import project linked to service account in [AI studio](https://aistudio.google.com/docs/api-key#import-projects)
-- Add entry for [GOOGLE_API_KEY](https://adk.dev/deploy/cloud-run/) (or GEMINI_API_KEY???)
+- Add entry for [GOOGLE_API_KEY](https://adk.dev/deploy/cloud-run/)
 
 ```bash
 export GCP_PROJECT="your-gcp-project-id"
